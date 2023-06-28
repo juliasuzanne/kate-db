@@ -11,3 +11,18 @@ Content-Type: application/json
   "descripton": "The quick brown fox jumps over the lazy dog",
   "url": "https://d1nn9x4fgzyvn4.cloudfront.net/migration-slide-image/19-170_sc235559_4x3.jpg"
 }
+
+### Show by ID
+GET http://localhost:3000/drawings/1.json
+
+
+### Update params
+PATCH http://localhost:3000/drawings/1.json
+Content-Type: application/json
+
+{
+  "name": "Test 1"
+}
+
+### Destroy drawing
+DELETE http://localhost:3000/drawings/3.json

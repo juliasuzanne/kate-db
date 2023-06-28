@@ -6,4 +6,10 @@ Rails.application.routes.draw do
   get "/drawings" => "drawings#index"
 
   post "/drawings" => "drawings#create"
+
+  get "/drawings/:id" => "drawings#show"
+
+  patch "/drawings/:id" => "drawings#update"
+
+  delete "/drawings/:id" => "drawings#destroy"
 end
