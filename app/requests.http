@@ -1,0 +1,13 @@
+### Drawings Index
+GET http://localhost:3000/drawings.json
+
+### Create new
+POST http://localhost:3000/drawings.json
+Content-Type: application/json
+
+{
+  "name": "Test 3",
+  "tags": "air water museum",
+  "descripton": "The quick brown fox jumps over the lazy dog",
+  "url": "https://d1nn9x4fgzyvn4.cloudfront.net/migration-slide-image/19-170_sc235559_4x3.jpg"
+}
