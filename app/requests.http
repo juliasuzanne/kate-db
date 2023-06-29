@@ -17,11 +17,11 @@ GET http://localhost:3000/drawings/1.json
 
 
 ### Update params
-PATCH http://localhost:3000/drawings/1.json
+PATCH http://localhost:3000/drawings/4.json
 Content-Type: application/json
 
 {
-  "name": "Test 1"
+  "tags": "water air museum blue"
 }
 
 ### Destroy drawing
