@@ -16,6 +16,19 @@ Rails.application.routes.draw do
 
   delete "/drawings/:id" => "drawings#destroy"
 
+  #images
+
+  get "/images" => "images#index"
+
+  post "/images" => "images#create"
+
+  #only show uses user_id as :id param
+  get "/images/:id" => "images#show"
+
+  patch "/images/:id" => "images#update"
+
+  delete "/images/:id" => "images#destroy"
+
   #users
 
   get "/signup" => "users#new"

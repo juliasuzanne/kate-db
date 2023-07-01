@@ -26,3 +26,22 @@ Content-Type: application/json
 
 ### Destroy drawing
 DELETE http://localhost:3000/drawings/3.json
+
+### Users create (signup)
+POST http://localhost:3000/users.json
+Content-Type: application/json
+
+{
+  "name": "Kate",
+  "password": "TinaKenard",
+  "password_confirmation": "TinaKenard"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "name": "Kate",
+  "password": "TinaKenard"
+}
