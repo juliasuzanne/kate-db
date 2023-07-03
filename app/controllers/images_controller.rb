@@ -5,7 +5,7 @@ class ImagesController < ApplicationController
   end
 
   def create
-    image = Image.new(
+    image = Image.create(
       url: params[:url],
       description: params[:description],
       user_id: params[:user_id],

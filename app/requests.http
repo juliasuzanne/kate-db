@@ -45,3 +45,14 @@ Content-Type: application/json
   "name": "Kate",
   "password": "TinaKenard"
 }
+
+
+### Images create
+POST http://localhost:3000/images.json
+Content-Type: application/json
+
+{
+  "url": "https://res.cloudinary.com/dygjz8yhp/image/upload/v1688163406/14_copy_21_fipelf.jpg",
+  "description": "test",
+  "user_id": 1
+}

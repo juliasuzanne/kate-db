@@ -11,11 +11,16 @@ class DrawingsController < ApplicationController
       description: params[:description],
       url: params[:url],
     )
-    render json: drawing.as_json
+    if drawing.save
+      render json: { message: "Drawing created successfully." }, status: :created
+    else
+      render json: { errors: drawing.errors.full_messages }, status: :bad_request
+    end
   end
 
   def show
     drawing = Drawing.find_by(id: params[:id])
+
     render json: drawing.as_json
   end
 
