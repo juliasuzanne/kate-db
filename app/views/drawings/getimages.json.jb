@@ -1,0 +1,14 @@
+{  drawing_url: @drawing.url,
+  tags: @drawing.tags}
+
+@drawing.images.map do |image|
+
+{
+  id: image.id,
+  url: image.url,
+  description: image.description,
+  drawing_id: image.drawing_id
+
+}
+end
+

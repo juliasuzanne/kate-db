@@ -13,15 +13,16 @@ Content-Type: application/json
 }
 
 ### Show by ID
-GET http://localhost:3000/drawings/1.json
+GET http://localhost:3000/drawings/18.json
 
 
 ### Update params
-PATCH http://localhost:3000/drawings/4.json
+PATCH http://localhost:3000/drawings/18.json
 Content-Type: application/json
 
 {
-  "tags": "water air museum blue"
+  //"tags": "water air museum blue"
+  "using_Images": 0
 }
 
 ### Destroy drawing

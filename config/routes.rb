@@ -5,16 +5,21 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   #drawings
+  resources :drawings do
+    resources :images
+  end
 
-  get "/drawings" => "drawings#index"
+  # get "/drawings" => "drawings#index"
 
-  post "/drawings" => "drawings#create"
+  # get "/drawings/:id/getimages/" => "drawings#getimages"
 
-  get "/drawings/:id" => "drawings#show"
+  # post "/drawings" => "drawings#create"
 
-  patch "/drawings/:id" => "drawings#update"
+  # get "/drawings/:id" => "drawings#show"
 
-  delete "/drawings/:id" => "drawings#destroy"
+  # patch "/drawings/:id" => "drawings#update"
+
+  # delete "/drawings/:id" => "drawings#destroy"
 
   #images
 

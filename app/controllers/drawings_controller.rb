@@ -1,15 +1,15 @@
 class DrawingsController < ApplicationController
   def index
-    drawings = Drawing.all
-    render json: drawings.as_json
+    @drawings = Drawing.all
+    render json: @drawings.as_json
   end
 
   def create
     drawing = Drawing.create(
-      name: params[:name],
       tags: params[:tags],
       description: params[:description],
       url: params[:url],
+      using_Images: false,
     )
     if drawing.save
       render json: { message: "Drawing created successfully." }, status: :created
@@ -20,17 +20,22 @@ class DrawingsController < ApplicationController
 
   def show
     drawing = Drawing.find_by(id: params[:id])
-
     render json: drawing.as_json
+  end
+
+  def getimages
+    @drawing = Drawing.find_by(id: params[:id])
+    # render json: @drawing.as_json
+    render template: "drawings/getimages"
   end
 
   def update
     drawing = Drawing.find_by(id: params[:id])
     drawing.update(
-      name: params[:name] || drawing.name,
       tags: params[:tags] || drawing.tags,
       description: params[:description] || drawing.description,
       url: params[:url] || drawing.url,
+      using_Images: params[:using_Images] || drawing.using_Images,
     )
     render json: drawing.as_json
   end

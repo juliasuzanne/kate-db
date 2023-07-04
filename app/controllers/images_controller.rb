@@ -18,7 +18,7 @@ class ImagesController < ApplicationController
   end
 
   def show
-    image = Image.all.where(user_id: params[:id])
+    image = Image.all.where(drawing_id: params[:id])
     render json: image.as_json
   end
 
