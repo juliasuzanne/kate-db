@@ -27,7 +27,7 @@ class ImagesController < ApplicationController
     image.update(
       url: params[:url] || image.url,
       description: params[:description] || image.description,
-      user_id: params[:user_id] || image.user_id,
+      drawing_id: params[:drawing_id] || image.drawing_id,
     )
     render json: image.as_json
   end
