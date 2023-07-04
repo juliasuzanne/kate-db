@@ -8,7 +8,7 @@ class ImagesController < ApplicationController
     image = Image.create(
       url: params[:url],
       description: params[:description],
-      user_id: params[:user_id],
+      drawing_id: params[:drawing_id],
     )
     if image.save
       render json: { message: "Image created successfully" }, status: :created
